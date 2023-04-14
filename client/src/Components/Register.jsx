@@ -4,14 +4,14 @@ import { Global } from './Global';
 
 function Register() {
     const [error, setError] = useState(null);
-    const [name, setName] = useState('');
+    const [firstName, setFirstName] = useState('');
     const [userName, setUserName] = useState('');
     const [password, setPassword] = useState('');
     const [repeatedPassword, setRepeatedPassword] = useState('');
     const { setRoute } = useContext(Global);
 
     const register = (_) => {
-        if (name.length < 3) {
+        if (firstName.length < 3) {
             setError(`Name is too short`);
             return;
         }
@@ -32,13 +32,13 @@ function Register() {
 
         axios
             .post(
-                'http://localhost:3003/users',
-                { name, userName, password },
+                'http://localhost:3003/register',
+                { userName, password, firstName },
                 { withCredentials: true }
             )
             .then((res) => {
                 if (res.data.status === 'OK') {
-                    setName('');
+                    setFirstName('');
                     setUserName('');
                     setPassword('');
                     setRepeatedPassword('');
@@ -70,9 +70,9 @@ function Register() {
                     <input
                         type="text"
                         className="form-control"
-                        placeholder="Enter your name"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
+                        placeholder="Enter your first name"
+                        value={firstName}
+                        onChange={(e) => setFirstName(e.target.value)}
                     />
                 </div>
                 <div className="login_name">

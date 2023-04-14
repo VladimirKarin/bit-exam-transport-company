@@ -22,4 +22,5 @@ const { createUser } = require('./models/users');
 // createBox('20 kg', 'no', 'yes', '86533291-d9bc-42fb-8df9-e80ab308cdad');
 // createBox('10 kg', 'yes', 'no', 'db5a4bc4-c72e-4f28-ba59-c365889cfac3');
 // getAllContainers();
-createNewUser('user1', '123', 'Yoda');
+// createUser('user1', '123', 'Yoda');
+createNewUser('user2', '123', 'Luke');

@@ -5,7 +5,7 @@ const { v4 } = require('uuid');
 const md5 = require('md5');
 const { getIdeas, getContainers } = require('./businessRules/containers');
 const { getUsers, setUsers } = require('./utils/storage');
-const { createNewUser } = require('./controllers');
+const { createUser } = require('./models/users');
 
 const app = express();
 const port = 3003;
@@ -40,7 +40,7 @@ app.get('/register', (req, res) => {
 });
 
 app.post('/register', (req, res) => {
-    createNewUser(req.body.userName, req.body.password, req.body.firstName);
+    createUser(req.body.userName, req.body.password, req.body.firstName);
     res.status(201).json({
         message: 'User has been successfully registered',
         status: 'OK',

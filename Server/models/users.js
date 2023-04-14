@@ -14,9 +14,8 @@ function createUser(userName, password, firstName) {
     newUser.role = 'user';
 
     const newUsers = [...users, newUser];
-    setUsers(newUsers);
 
-    return newUser.id;
+    return setUsers(newUsers);
 }
 module.exports = {
     createUser,
