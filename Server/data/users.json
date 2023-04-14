@@ -1,0 +1,11 @@
+[
+    {
+        "id": "40f1415a-e940-40be-a6f2-db77bbaa631b",
+        "picture": "../img/user/user.webp",
+        "userName": "admin",
+        "password": "d9b1d7db4cd6e70935368a1efb10e377",
+        "firstName": "Administrator",
+        "session": null,
+        "role": "user"
+    }
+]

@@ -18,11 +18,11 @@ function setUsers(users) {
     setData(users, 'users');
 }
 
-function getContainer() {
+function getContainers() {
     return getData('containers');
 }
 
-function setContainer(container) {
+function setContainers(container) {
     setData(container, 'containers');
 }
 
@@ -37,8 +37,8 @@ function setbox(box) {
 module.exports = {
     getUsers,
     setUsers,
-    getContainer,
-    setContainer,
+    getContainers,
+    setContainers,
     getbox,
     setbox,
 };
