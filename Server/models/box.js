@@ -17,6 +17,31 @@ function createBox(weight, flamable, exparation, containerId) {
 
     return newBox.id;
 }
+
+function updateBox(boxId, key, value) {
+    let boxes = getBoxes();
+
+    const box = boxes.find((box) => boxId === box.id);
+
+    const updatedBox = {
+        ...box,
+        [key]: value,
+    };
+
+    function reduceFunction(previousValue, box) {
+        if (box.id === boxId) {
+            return [...previousValue, updatedBox];
+        }
+        return [...previousValue, box];
+    }
+
+    const initialReduceValue = [];
+    const updatedBoxes = boxes.reduce(reduceFunction, initialReduceValue);
+
+    setBoxes(updatedBoxes);
+}
+
 module.exports = {
     createBox,
+    updateBox,
 };
