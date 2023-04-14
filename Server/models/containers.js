@@ -11,9 +11,9 @@ function createContainer(type) {
     let containers = getContainers();
     const newContainer = {};
     newContainer.id = v4();
-    newContainer.picture = '../img/user/user.webp';
+    newContainer.picture = '../img/container/container.jpeg';
     newContainer.type = type;
-    newContainer.space = 'empty';
+    newContainer.space = 0;
     const newContainers = [...containers, newContainer];
     setContainers(newContainers);
 

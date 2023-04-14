@@ -1,0 +1,10 @@
+[
+    {
+        "id": "34e96c52-6c2a-4db6-8750-61d8962359bd",
+        "picture": "../img/box/box.png",
+        "weight": "50 kg",
+        "flamable": "yes",
+        "exparation": "no",
+        "containerId": "ba29cbe2-738b-48e9-aef9-528bc7ed58a2"
+    }
+]

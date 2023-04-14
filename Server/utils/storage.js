@@ -26,11 +26,11 @@ function setContainers(container) {
     setData(container, 'containers');
 }
 
-function getbox() {
+function getBoxes() {
     return getData('boxes');
 }
 
-function setbox(box) {
+function setBoxes(box) {
     setData(box, 'boxes');
 }
 
@@ -39,6 +39,6 @@ module.exports = {
     setUsers,
     getContainers,
     setContainers,
-    getbox,
-    setbox,
+    getBoxes,
+    setBoxes,
 };

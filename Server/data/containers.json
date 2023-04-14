@@ -1,1 +1,8 @@
-[]
+[
+    {
+        "id": "ba29cbe2-738b-48e9-aef9-528bc7ed58a2",
+        "picture": "../img/container/container.jpeg",
+        "type": "small",
+        "space": 0
+    }
+]
