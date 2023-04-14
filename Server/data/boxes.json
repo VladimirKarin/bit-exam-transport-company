@@ -1,1 +1,47 @@
-[]
+[
+    {
+        "id": "efb9d5d0-a783-4724-8dcf-8a48f0f3dfe7",
+        "picture": "../img/box/box.png",
+        "weight": "50 kg",
+        "flamable": "yes",
+        "exparation": "no",
+        "containerId": "ba29cbe2-738b-48e9-aef9-528bc7ed58a2",
+        "sum": 1
+    },
+    {
+        "id": "9c1e9877-4fa6-4c4c-9869-09e7f35402b0",
+        "picture": "../img/box/box.png",
+        "weight": "60 kg",
+        "flamable": "no",
+        "exparation": "yes",
+        "containerId": "ba29cbe2-738b-48e9-aef9-528bc7ed58a2",
+        "sum": 1
+    },
+    {
+        "id": "5a79377d-6b92-4325-843d-7084b47477ce",
+        "picture": "../img/box/box.png",
+        "weight": "30 kg",
+        "flamable": "yes",
+        "exparation": "no",
+        "containerId": "adb5472b-c7c9-450e-bd02-7646882d8988",
+        "sum": 1
+    },
+    {
+        "id": "086cffa0-80e6-450f-941c-19fc27aaa118",
+        "picture": "../img/box/box.png",
+        "weight": "20 kg",
+        "flamable": "no",
+        "exparation": "yes",
+        "containerId": "86533291-d9bc-42fb-8df9-e80ab308cdad",
+        "sum": 1
+    },
+    {
+        "id": "c8310b18-4068-4cca-93e0-5a063a034fe3",
+        "picture": "../img/box/box.png",
+        "weight": "10 kg",
+        "flamable": "yes",
+        "exparation": "no",
+        "containerId": "db5a4bc4-c72e-4f28-ba59-c365889cfac3",
+        "sum": 1
+    }
+]

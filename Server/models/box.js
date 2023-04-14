@@ -11,6 +11,7 @@ function createBox(weight, flamable, exparation, containerId) {
     newBox.flamable = flamable;
     newBox.exparation = exparation;
     newBox.containerId = containerId;
+    newBox.sum = 1;
 
     const newBoxes = [...boxes, newBox];
     setBoxes(newBoxes);

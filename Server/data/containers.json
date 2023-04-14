@@ -3,6 +3,24 @@
         "id": "ba29cbe2-738b-48e9-aef9-528bc7ed58a2",
         "picture": "../img/container/container.jpeg",
         "type": "small",
-        "space": 0
+        "boxCount": 0
+    },
+    {
+        "id": "adb5472b-c7c9-450e-bd02-7646882d8988",
+        "picture": "../img/container/container.jpeg",
+        "type": "small",
+        "boxCount": 0
+    },
+    {
+        "id": "86533291-d9bc-42fb-8df9-e80ab308cdad",
+        "picture": "../img/container/container.jpeg",
+        "type": "medium",
+        "boxCount": 0
+    },
+    {
+        "id": "db5a4bc4-c72e-4f28-ba59-c365889cfac3",
+        "picture": "../img/container/container.jpeg",
+        "type": "large",
+        "boxCount": 0
     }
 ]
