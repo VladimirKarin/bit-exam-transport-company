@@ -19,6 +19,17 @@ function createContainer(type) {
 
     return newContainer.id;
 }
+
+function deleteContainer(containerId) {
+    let containers = getContainers();
+
+    let updatedContainers = containers.filter(
+        (container) => containerId !== container.id
+    );
+    setContainers(updatedContainers);
+}
+
 module.exports = {
     createContainer,
+    deleteContainer,
 };
