@@ -1,0 +1,41 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.navbar-bg {
+    background: #2d66ff;
+}
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+ul div.left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+ul div.right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 600px;
+}
+.nav-link {
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    margin: 10px 50px 10px 10px;
+}
+.navbar-brand {
+    color: white;
+    font-size: 35px;
+    padding: 10px;
+    margin: 10px 50px 10px 10px;
+}
