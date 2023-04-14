@@ -1,3 +1,4 @@
+const { createNewUser } = require('./controllers');
 const { createBox, updateBox, deleteBox } = require('./models/box');
 const {
     createContainer,
@@ -20,4 +21,5 @@ const { createUser } = require('./models/users');
 // createBox('30 kg', 'yes', 'no', 'adb5472b-c7c9-450e-bd02-7646882d8988');
 // createBox('20 kg', 'no', 'yes', '86533291-d9bc-42fb-8df9-e80ab308cdad');
 // createBox('10 kg', 'yes', 'no', 'db5a4bc4-c72e-4f28-ba59-c365889cfac3');
-getAllContainers();
+// getAllContainers();
+createNewUser('user1', '123', 'Yoda');
