@@ -29,9 +29,9 @@ function Login() {
                     setUserName('');
                     setPassword('');
                     setLogged(true);
-                    setAuthName(res.data.name);
-                    setError(null);
-                    setRoute('home');
+                    // setAuthName(res.data.name);
+                    // setError(null);
+                    // setRoute('home');
                 } else {
                     setError(true);
                 }
