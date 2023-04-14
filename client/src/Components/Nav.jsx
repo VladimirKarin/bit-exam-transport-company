@@ -1,11 +1,35 @@
 import '../styles/nav.css';
+import { useContext } from 'react';
+import { Global } from './Global';
+import axios from 'axios';
+
 function Nav() {
+    const {
+        route,
+        setRoute,
+        authName,
+        setAuthName,
+        setLogged,
+        authRole,
+        setAuthRole,
+    } = useContext(Global);
+
+    const logOut = (_) => {
+        axios
+            .post('http://localhost:3003/logout', {}, { withCredentials: true })
+            .then((res) => {
+                setLogged(false);
+                setAuthName(null);
+                setAuthRole(null);
+                setRoute('home');
+                console.log(route);
+            });
+    };
+
     return (
         <>
             <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
-                <a class="navbar-brand" href="#">
-                    TranSCompany
-                </a>
+                <span class="navbar-brand">TranSCompany</span>
                 <button
                     class="navbar-toggler"
                     type="button"
@@ -21,38 +45,98 @@ function Nav() {
                     <ul class="navbar-nav">
                         <div className="left">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">
+                                <span
+                                    class="nav-link"
+                                    onClick={(_) => setRoute('home')}
+                                    className={
+                                        'nav-link' +
+                                        (route === 'home' ? ' active' : '')
+                                    }
+                                    aria-current="page"
+                                >
                                     Home
                                     {/* Home <span class="sr-only">(current)</span> */}
-                                </a>
+                                </span>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Container List
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Create Load
-                                </a>
-                            </li>
+                            {['user'].includes(authRole) ? (
+                                <li class="nav-item">
+                                    <span
+                                        onClick={(_) => setRoute('container')}
+                                        className={
+                                            'nav-link' +
+                                            (route === 'container'
+                                                ? ' active'
+                                                : '')
+                                        }
+                                        aria-current="page"
+                                    >
+                                        Container List
+                                    </span>
+                                </li>
+                            ) : null}
+                            {['user'].includes(authRole) ? (
+                                <li class="nav-item">
+                                    <span
+                                        onClick={(_) => setRoute('box')}
+                                        className={
+                                            'nav-link' +
+                                            (route === 'box' ? ' active' : '')
+                                        }
+                                        aria-current="page"
+                                    >
+                                        Create Load
+                                    </span>
+                                </li>
+                            ) : null}
                         </div>
                         <div className="right">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">
-                                    User
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Login
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">
-                                    Register
-                                </a>
-                            </li>
+                            {authName ? (
+                                <>
+                                    <li class="nav-item">
+                                        <span class="nav-link">{authName}</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="nav-link" onClick={logOut}>
+                                            Logout
+                                        </span>
+                                    </li>
+                                </>
+                            ) : (
+                                <>
+                                    <li class="nav-item">
+                                        <span
+                                            onClick={(_) => setRoute('login')}
+                                            href="#"
+                                            className={
+                                                'nav-link' +
+                                                (route === 'login'
+                                                    ? ' active'
+                                                    : '')
+                                            }
+                                            aria-current="page"
+                                        >
+                                            Login
+                                        </span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <span
+                                            onClick={(_) =>
+                                                setRoute('register')
+                                            }
+                                            href="#"
+                                            className={
+                                                'nav-link' +
+                                                (route === 'login'
+                                                    ? ' active'
+                                                    : '')
+                                            }
+                                            aria-current="page"
+                                        >
+                                            Register
+                                        </span>
+                                    </li>
+                                </>
+                            )}
                         </div>
                     </ul>
                 </div>

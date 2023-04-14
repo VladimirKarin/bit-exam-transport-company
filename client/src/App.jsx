@@ -8,7 +8,7 @@ function App() {
     return (
         <GlobalProvider>
             <Nav />
-            {/* <Routes /> */}
+            <Routes />
         </GlobalProvider>
     );
 }
