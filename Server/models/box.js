@@ -41,7 +41,16 @@ function updateBox(boxId, key, value) {
     setBoxes(updatedBoxes);
 }
 
+function deleteBox(boxId) {
+    let boxes = getBoxes();
+
+    let updatedBoxes = boxes.filter((box) => boxId !== box.id);
+
+    setBoxes(updatedBoxes);
+}
+
 module.exports = {
     createBox,
     updateBox,
+    deleteBox,
 };
