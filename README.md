@@ -3,4 +3,5 @@
 login: user1
 pass: 123
 
-Po logina refreshinkite puslapi, kad pamatyti pokycius.
+Po logino refreshinkite puslapi, kad pamatyti pokycius.
+Man atrodo bus lengviau pasiziureti koda, negu funkcionaluma kuris dabar yra.
