@@ -61,10 +61,10 @@ function Nav() {
                             {['user'].includes(authRole) ? (
                                 <li class="nav-item">
                                     <span
-                                        onClick={(_) => setRoute('container')}
+                                        onClick={(_) => setRoute('containers')}
                                         className={
                                             'nav-link' +
-                                            (route === 'container'
+                                            (route === 'containers'
                                                 ? ' active'
                                                 : '')
                                         }
@@ -77,10 +77,10 @@ function Nav() {
                             {['user'].includes(authRole) ? (
                                 <li class="nav-item">
                                     <span
-                                        onClick={(_) => setRoute('box')}
+                                        onClick={(_) => setRoute('boxes')}
                                         className={
                                             'nav-link' +
-                                            (route === 'box' ? ' active' : '')
+                                            (route === 'boxes' ? ' active' : '')
                                         }
                                         aria-current="page"
                                     >

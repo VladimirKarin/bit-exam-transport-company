@@ -13,7 +13,7 @@ function Routes() {
     switch (route) {
         case 'home':
             return (
-                <Auth roles={''}>
+                <Auth roles={'user, admin'}>
                     <Home accounts={users} />
                 </Auth>
             );

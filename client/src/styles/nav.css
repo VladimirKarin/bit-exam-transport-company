@@ -32,6 +32,7 @@ ul div.right {
     font-size: 25px;
     padding: 10px;
     margin: 10px 50px 10px 10px;
+    cursor: pointer;
 }
 .navbar-brand {
     color: white;
