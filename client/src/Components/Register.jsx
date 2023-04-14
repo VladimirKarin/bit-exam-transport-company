@@ -56,7 +56,7 @@ function Register() {
     };
 
     return (
-        <div className="login">
+        <div className="login container col-2">
             <div className="card-header">
                 {error ? (
                     <span style={{ color: 'crimson' }}>{error}</span>
@@ -105,7 +105,10 @@ function Register() {
                         onChange={(e) => setRepeatedPassword(e.target.value)}
                     />
                 </div>
-                <button className="button add" onClick={register}>
+                <button
+                    className="btn btn-outline-primary btn-lg btn-block"
+                    onClick={register}
+                >
                     Register New User
                 </button>
             </div>

@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { Global } from './Global';
+import '../styles/login.css';
 
 function Login() {
     const [error, setError] = useState(null);
@@ -39,7 +40,7 @@ function Login() {
     };
 
     return (
-        <div className="login">
+        <div className="login container col-2">
             <div className="card-header">
                 {error ? (
                     <span style={{ color: 'crimson' }}>Login Error</span>
@@ -71,7 +72,10 @@ function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <button className="button add" onClick={login}>
+                <button
+                    className="btn btn-outline-primary btn-lg btn-block"
+                    onClick={login}
+                >
                     Login
                 </button>
             </div>
